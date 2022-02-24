@@ -1,6 +1,7 @@
 meta:
   id: px8
-  file-extension: pk, pb8
+  file-extension: pk8, pb8
+  license: MIT
   endian: le
 seq:
   - id: encryption_constant
