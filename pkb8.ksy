@@ -257,6 +257,8 @@ instances:
     value: '[ivs32 & 0x1F, (ivs32 >> 5) & 0x1F, (ivs32 >> 10) & 0x1F, (ivs32 >> 20) & 0x1F, (ivs32 >> 25) & 0x1F, (ivs32 >> 15) & 0x1F]'
   is_egg:
     value: '((ivs32 >> 30) & 1) == 1'
+  has_nickname:
+    value: '((ivs32 >> 31) & 1) == 1'
   form_arg:
     value: c.multi_0
   form_arg_remain:
