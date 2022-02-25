@@ -245,6 +245,12 @@ instances:
     value: '(a.multi_1 & 2) == 2'
   gender:
     value: '(a.multi_1 >> 2) & 0x3'
+  shiny_xor:
+    value: '(a.tidsid >> 16) ^ (a.tidsid & 0xFFFF) ^ (a.pid >> 16) ^ (a.pid & 0xFFFF)'
+  is_shiny:
+    value: 'shiny_xor < 15'
+  shiny_type:
+    value: 'is_shiny ? shiny_xor == 0 ? "Square" : "Star" : ""'
   pkrs:
     value: a.multi_2
   pkrs_days:
