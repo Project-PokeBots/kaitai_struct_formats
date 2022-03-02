@@ -186,7 +186,7 @@ types:
         repeat: expr
         repeat-expr: 8
       - id: unused_1
-        size: eos
+        size-eos: true
   enc_chk:
     seq:
       - id: enc_chk
