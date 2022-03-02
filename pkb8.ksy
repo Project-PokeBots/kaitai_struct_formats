@@ -251,8 +251,10 @@ instances:
     value: '(a.multi_1 >> 2) & 0x3'
   language:
     value: c.language
+  tidsid:
+    value: a.tidsid
   shiny_xor:
-    value: '(a.tidsid >> 16) ^ (a.tidsid & 0xFFFF) ^ (a.pid >> 16) ^ (a.pid & 0xFFFF)'
+    value: '(tidsid >> 16) ^ (tidsid & 0xFFFF) ^ (a.pid >> 16) ^ (a.pid & 0xFFFF)'
   is_shiny:
     value: 'shiny_xor < 15'
   shiny_type:
@@ -299,3 +301,7 @@ instances:
     value: a.evs
   moves:
     value: b.moves
+  ot:
+    value: d.ot
+  ot_lang:
+    value: c.ht_language

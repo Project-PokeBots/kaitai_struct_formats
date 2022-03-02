@@ -132,7 +132,7 @@ types:
         type: u1
   blk_d:
     seq:
-      - id: ht
+      - id: ot
         type: str
         size: 24
       - id: enc_chk_0
@@ -238,6 +238,8 @@ instances:
     value: d.multi_1
   hts:
     value: '[((ht_flags >> 0) & 1) == 1, ((ht_flags >> 1) & 1) == 1, ((ht_flags >> 2) & 1) == 1, ((ht_flags >> 3) & 1) == 1, ((ht_flags >> 4) & 1) == 1, ((ht_flags >> 5) & 1) == 1]'
+  tidsid:
+    value: a.tidsid
   shiny_xor:
     value: '(a.tidsid >> 16) ^ (a.tidsid & 0xFFFF) ^ (a.pid >> 16) ^ (a.pid & 0xFFFF)'
   is_shiny:
@@ -254,3 +256,7 @@ instances:
     value: a.evs
   moves:
     value: b.moves
+  ot:
+    value: d.ot
+  ot_lang:
+    value: language
