@@ -233,6 +233,10 @@ types:
         size: 2
         contents: [0x0, 0x0]
 instances:
+  species:
+    value: a.species
+  ability: 
+    value: a.ability
   ability_num:
     value: 'a.multi_0 & 7'
   fav:
@@ -245,12 +249,16 @@ instances:
     value: '(a.multi_1 & 2) == 2'
   gender:
     value: '(a.multi_1 >> 2) & 0x3'
+  language:
+    value: c.language
   shiny_xor:
     value: '(a.tidsid >> 16) ^ (a.tidsid & 0xFFFF) ^ (a.pid >> 16) ^ (a.pid & 0xFFFF)'
   is_shiny:
     value: 'shiny_xor < 15'
   shiny_type:
     value: 'is_shiny ? shiny_xor == 0 ? "Square" : "Star" : ""'
+  ball:
+    value: d.ball
   pkrs:
     value: a.multi_2
   pkrs_days:
@@ -283,3 +291,11 @@ instances:
     value: d.multi_1
   hts:
     value: '[((ht_flags >> 0) & 1) == 1, ((ht_flags >> 1) & 1) == 1, ((ht_flags >> 2) & 1) == 1, ((ht_flags >> 3) & 1) == 1, ((ht_flags >> 4) & 1) == 1, ((ht_flags >> 5) & 1) == 1]'
+  held_item:
+    value: a.held_item
+  nature:
+    value: a.nature
+  evs:
+    value: a.evs
+  moves:
+    value: b.moves

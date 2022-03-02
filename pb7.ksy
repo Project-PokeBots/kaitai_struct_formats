@@ -192,6 +192,10 @@ types:
       - id: enc_chk
         size: 2
 instances:
+  species:
+    value: a.species
+  ability:
+    value: a.ability
   ability_num:
     value: 'a.multi_0 & 7'
   fav:
@@ -202,22 +206,24 @@ instances:
     value: '(a.multi_1 >> 1) & 3'
   form:
     value: 'a.multi_1 >> 3'
+  language:
+    value: d.language
   pkrs:
-    value: 'a.multi_2'
+    value: a.multi_2
   pkrs_days:
     value: 'pkrs & 0xF'
   pkrs_strain: 
     value: 'pkrs >> 4'
   form_argument:
-    value: 'a.multi_3'
+    value: a.multi_3
   form_argumant_remain:
-    value: 'form_argument'
+    value: form_argument
   form_argument_elapsed:
     value: '(form_argument >> 8)'
   form_argument_maximum:
     value: '(form_argument >> 16)'
   ivs32:
-    value: 'b.multi_0'
+    value: b.multi_0
   ivs: 
     value: '[ivs32 & 0x1F, (ivs32 >> 5) & 0x1F, (ivs32 >> 10) & 0x1F, (ivs32 >> 15) & 0x1F, (ivs32 >> 20) & 0x1F, (ivs32 >> 25) & 0x1F]'
   is_egg:
@@ -232,3 +238,19 @@ instances:
     value: d.multi_1
   hts:
     value: '[((ht_flags >> 0) & 1) == 1, ((ht_flags >> 1) & 1) == 1, ((ht_flags >> 2) & 1) == 1, ((ht_flags >> 3) & 1) == 1, ((ht_flags >> 4) & 1) == 1, ((ht_flags >> 5) & 1) == 1]'
+  shiny_xor:
+    value: '(a.tidsid >> 16) ^ (a.tidsid & 0xFFFF) ^ (a.pid >> 16) ^ (a.pid & 0xFFFF)'
+  is_shiny:
+    value: 'shiny_xor < 15'
+  shiny_type:
+    value: 'is_shiny ? shiny_xor == 0 ? "Square" : "Star" : ""'
+  ball: 
+    value: d.ball
+  held_item:
+    value: a.held_item
+  nature:
+    value: a.nature
+  evs:
+    value: a.evs
+  moves:
+    value: b.moves

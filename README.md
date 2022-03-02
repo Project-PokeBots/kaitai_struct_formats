@@ -1,5 +1,5 @@
 # pk8 /pb8
-![graphviz_pkb8](https://cdn.discordapp.com/attachments/937092599842480148/946849395205361714/graphviz5.png)
+![graphviz_pkb8](https://cdn.discordapp.com/attachments/911821693834637332/948599350848802866/graphviz7.png)
 
 # pb7
-![graphviz_pb7](https://cdn.discordapp.com/attachments/937092599842480148/948582928932298832/graphviz6.png)
+![graphviz_pb7](https://cdn.discordapp.com/attachments/911821693834637332/948599350404194304/graphviz8.png)
