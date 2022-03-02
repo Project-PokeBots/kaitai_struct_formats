@@ -265,6 +265,8 @@ instances:
     value: '((ivs32 >> 30) & 1) == 1'
   has_nickname:
     value: '((ivs32 >> 31) & 1) == 1'
+  form:
+    value: a.form
   form_arg:
     value: c.multi_0
   form_arg_remain:
