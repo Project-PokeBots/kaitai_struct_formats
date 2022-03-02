@@ -53,7 +53,7 @@ types:
         type: u1
       - id: multi_1
         type: u1
-      - id: unused_a3
+      - id: unused_3
         size: 1
       - id: form
         type: u2
@@ -78,6 +78,8 @@ types:
       - id: height_scalar
         type: u1
       - id: weight_scalar
+        type: u1
+      - id: height_scalar_copy
         type: u1
       - id: unused_a6
         size: 6
@@ -237,24 +239,30 @@ instances:
     value: a.species
   ability: 
     value: a.ability
+  multi_a0:
+    value: a.multi_0
   ability_num:
-    value: 'a.multi_0 & 7'
+    value: 'multi_a0 & 7'
   fav:
-    value: '(a.multi_0 & 8) != 0'
+    value: '(multi_a0 & 8) != 0'
   can_gmax:
-    value: '(a.multi_0 & 16) != 0'
+    value: '(multi_a0 & 16) != 0'
+  multi_a1:
+    value: a.multi_1
   fateful_encounter:
-    value: '(a.multi_1 & 1) == 1'
+    value: '(multi_a1 & 1) == 1'
   flag2:
-    value: '(a.multi_1 & 2) == 2'
+    value: '(multi_a1 & 2) == 2'
   gender:
-    value: '(a.multi_1 >> 2) & 0x3'
+    value: '(multi_a1 >> 2) & 0x3'
   language:
     value: c.language
   tidsid:
     value: a.tidsid
+  pid: 
+    value: a.pid
   shiny_xor:
-    value: '(tidsid >> 16) ^ (tidsid & 0xFFFF) ^ (a.pid >> 16) ^ (a.pid & 0xFFFF)'
+    value: '(tidsid >> 16) ^ (tidsid & 0xFFFF) ^ (pid >> 16) ^ (pid & 0xFFFF)'
   is_shiny:
     value: 'shiny_xor < 15'
   shiny_type:
@@ -285,10 +293,12 @@ instances:
     value: 'form_arg >> 8'
   form_arg_max:
     value: 'form_arg >> 16'
+  multi_d0:
+    value: d.multi_0
   met_lvl:
-    value: 'd.multi_0 & ~0x80'
+    value: 'multi_d0 & ~0x80'
   ot_gender:
-    value: 'd.multi_0 >> 7'
+    value: 'multi_d0 >> 7'
   ht_flags:
     value: d.multi_1
   hts:
