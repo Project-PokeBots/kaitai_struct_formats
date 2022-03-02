@@ -134,9 +134,7 @@ types:
     seq:
       - id: ot
         type: str
-        size: 24
-      - id: enc_chk_0
-        type: enc_chk
+        size: 26
       - id: ot_friendship
         type: u1
       - id: unused_0
@@ -196,16 +194,20 @@ instances:
     value: a.species
   ability:
     value: a.ability
+  multi_a0:
+    value: a.multi_0
   ability_num:
-    value: 'a.multi_0 & 7'
+    value: 'multi_a0 & 7'
   fav:
-    value: '(a.multi_0 & 8) != 0'
+    value: '(multi_a0 & 8) != 0'
+  multi_a1:
+    value: a.multi_1
   fateful_encounter:
-    value: '(a.multi_1 & 1) == 1'
+    value: '(multi_a1 & 1) == 1'
   gender:
-    value: '(a.multi_1 >> 1) & 3'
+    value: '(multi_a1 >> 1) & 3'
   form:
-    value: 'a.multi_1 >> 3'
+    value: 'multi_a1 >> 3'
   language:
     value: d.language
   pkrs:
@@ -230,18 +232,22 @@ instances:
     value: '((ivs32 >> 30) & 1) == 1'
   has_nickname:
     value: '((ivs32 >> 31) & 1) == 1'
+  multi_d0:
+    value: d.multi_0
   met_lvl:
-    value: 'd.multi_0 & ~0x80'
+    value: 'multi_d0 & ~0x80'
   ot_gender:
-    value: 'd.multi_0 >> 7'
+    value: 'multi_d0 >> 7'
   ht_flags:
     value: d.multi_1
   hts:
     value: '[((ht_flags >> 0) & 1) == 1, ((ht_flags >> 1) & 1) == 1, ((ht_flags >> 2) & 1) == 1, ((ht_flags >> 3) & 1) == 1, ((ht_flags >> 4) & 1) == 1, ((ht_flags >> 5) & 1) == 1]'
   tidsid:
     value: a.tidsid
+  pid:
+    value: a.pid
   shiny_xor:
-    value: '(a.tidsid >> 16) ^ (a.tidsid & 0xFFFF) ^ (a.pid >> 16) ^ (a.pid & 0xFFFF)'
+    value: '(tidsid >> 16) ^ (tidsid & 0xFFFF) ^ (pid >> 16) ^ (pid & 0xFFFF)'
   is_shiny:
     value: 'shiny_xor < 15'
   shiny_type:
