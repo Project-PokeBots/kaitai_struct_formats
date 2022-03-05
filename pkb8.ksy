@@ -81,8 +81,8 @@ types:
         type: u1
       - id: height_scalar_copy
         type: u1
-      - id: unused_a6
-        size: 6
+      - id: unused_6
+        size: 5
   blk_b:
     seq:
       - id: nickname
