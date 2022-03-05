@@ -189,6 +189,7 @@ types:
     seq:
       - id: enc_chk
         size: 2
+        contents: [0, 0]
 instances:
   species:
     value: a.species
