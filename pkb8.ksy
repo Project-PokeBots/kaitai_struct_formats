@@ -86,7 +86,6 @@ types:
   blk_b:
     seq:
       - id: nickname
-        type: str
         size: 24
       - id: enc_chk_0
         type: enc_chk
