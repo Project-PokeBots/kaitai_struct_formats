@@ -3,7 +3,6 @@ meta:
   file-extension: pb7
   license: MIT
   endian: le
-  encoding: UTF-8
 seq:
   - id: a
     type: blk_a
@@ -69,7 +68,6 @@ types:
   blk_b:
     seq:
       - id: nickname
-        type: str
         size: 24
       - id: enc_chk_0
         type: enc_chk
@@ -96,7 +94,6 @@ types:
   blk_c:
     seq:
       - id: ht
-        type: str
         size: 24
       - id: enc_chk_0
         type: enc_chk
@@ -133,7 +130,6 @@ types:
   blk_d:
     seq:
       - id: ot
-        type: str
         size: 26
       - id: ot_friendship
         type: u1

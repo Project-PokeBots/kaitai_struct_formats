@@ -2,7 +2,6 @@ meta:
   id: pa8
   license: MIT
   endian: le
-  encoding: UTF-8
 seq:
   - id: h
     type: header
@@ -98,7 +97,6 @@ types:
   blk_b:
     seq:
       - id: nickname
-        type: str
         size: 36
       - id: enc_chk_0
         type: enc_chk
@@ -137,7 +135,6 @@ types:
   blk_c:
     seq:
       - id: ht
-        type: str
         size: 24
       - id: enc_chk_1
         type: enc_chk
@@ -188,7 +185,6 @@ types:
   blk_d:
     seq:
       - id: ot
-        type: str
         size: 26
       - id: ot_friendship
         type: u1

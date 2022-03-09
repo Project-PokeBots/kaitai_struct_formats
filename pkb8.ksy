@@ -2,7 +2,6 @@ meta:
   id: pkb8
   license: MIT
   endian: le
-  encoding: UTF-8
 seq:
   - id: h
     type: header
@@ -122,7 +121,6 @@ types:
   blk_c:
     seq:
       - id: ht
-        type: str
         size: 24
         encoding: UTF-8
       - id: enc_chk_1
@@ -174,7 +172,6 @@ types:
   blk_d:
     seq:
       - id: ot
-        type: str
         size: 26
       - id: ot_friendship
         type: u1
