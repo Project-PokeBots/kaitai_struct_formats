@@ -122,7 +122,6 @@ types:
     seq:
       - id: ht
         size: 24
-        encoding: UTF-8
       - id: enc_chk_1
         type: enc_chk
       - id: ht_gender
